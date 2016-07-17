@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/fanyang1988/golang_game_develop_lesson/base_project/config"
 	"fmt"
+	"github.com/fanyang1988/golang_game_develop_lesson/base_project/config"
 )
 
 /*
@@ -19,11 +19,11 @@ import (
 // useToml 使用toml，
 // 为了其他模块可以读取配置信息，
 // config结构是独立的包
-func useToml(){
+func useToml() {
 	err := config.LoadCfgFromFile(
 		"conf/config.toml")
 
-	if err != nil{
+	if err != nil {
 		fmt.Errorf(
 			"load cfg err by %s\n",
 			err.Error())

@@ -43,12 +43,12 @@ type InfoCfg struct {
 var cfg BaseProjectCfg
 
 // Get 获取cfg接口
-func Get() BaseProjectCfg{
+func Get() BaseProjectCfg {
 	return cfg
 }
 
 // LoadCfgFromFile 从指定文件中加载配置信息 返回是否出错
-func LoadCfgFromFile(path string) error{
+func LoadCfgFromFile(path string) error {
 	_, err := toml.DecodeFile(path, &cfg)
 	return err
 }
