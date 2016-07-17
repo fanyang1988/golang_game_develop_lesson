@@ -41,3 +41,14 @@ func Critical(format string, params ...interface{}) {
 		",",
 		debug.Stack())
 }
+
+func PanicHandle(){
+	if err := recover(); err != nil{
+		seelog.Critical(
+			"Panic Err by ",
+			err,
+			" , stack: ",
+			debug.Stack())
+		seelog.Flush()
+	}
+}
