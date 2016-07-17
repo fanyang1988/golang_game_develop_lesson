@@ -1,0 +1,12 @@
+<seelog minlevel="info">
+    <formats>
+        <format id="all" format="[%Date][%Time][%File] [%LEV] %Msg%n"/>
+    </formats>
+    <outputs formatid="all">
+        <console/>
+        <rollingfile type="size" filename="./log/base.log" maxsize="1000" maxrolls="5" />
+        <filter levels="error">
+            <file path="./log/base-error.log"/>
+        </filter>
+    </outputs>
+</seelog>
